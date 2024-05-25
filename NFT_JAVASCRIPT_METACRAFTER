@@ -1,0 +1,43 @@
+
+// create a variable to hold your NFT's
+
+// this function will take in some values as parameters, create an
+// NFT object using the parameters passed to it for its metadata, 
+// and store it in the variable above.
+let NFTS =[];
+function mintNFT (writer_name,poem_name,poem ) {
+    let nfts={
+        writer_name: writer_name,
+        poem_name: poem_name ,
+        poem: poem 
+    };
+   
+NFTS.push(nfts);
+}
+
+// create a "loop" that will go through an "array" of NFT's
+// and print their metadata with console.log()
+function listNFTs () {
+    for(let i=0;i<NFTS.length;i++){
+        console.log("Writer Name : "+ NFTS[i].writer_name);
+        console.log("Poem Name : "+ NFTS[i].poem_name);
+        
+        console.log("poem : "+ NFTS[i].poem)
+        console.log("-----------------------------------------------------------------------------------------------------------------");
+    }
+
+}
+
+// print the total number of NFTs we have minted to the console
+function getTotalSupply() {
+  return NFTS.length;
+}
+
+// call your functions below this line
+
+mintNFT("KHUSHI","HOMELESS","The home was ours, but you made it yours And you left me homeless ");
+mintNFT("KHUHSI1","TODAY VS YESTERDAY","Talked thousands yesterday But today seems silent ;I wasn't here yesterday Nor I am going to be now")
+mintNFT("KHUSHI2","STRANGERS","I wished if we could remain strangers ;Then we didnt have to be from strangers to strangers");
+
+listNFTs();
+console.log("Total Supply: " + getTotalSupply());
